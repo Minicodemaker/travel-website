@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% load static %} 
+{% block body %}
+{% if d %}
+{% for i in d %}
+
+<div class="container-fluid my-0, px-0">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src= "{{ i.img.url }}"  class="d-block w-100" alt="..." height="500" />
+      </div> 
+    </div>
+  </div>
+  <div class="container text-center"  style="position: absolute;
+  
+    position: absolute;
+    top: 273px;
+    left: 300px;
+    color: white;
+    font-size:70px;"
+    > 
+  <h1 style="color:black;">{{i.name}}</h1>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid my-3 mb-3" style="background: #f3f1e9ff;min-height:400px;border-radius:20px;padding:30px;">
+    <h4> {{i.name}}</h4>
+    <p>{{i.desc}}</p>
+
+</div>
+ 
+{% endfor %}
+{% else %}
+    <p>not found</p>
+{% endif %}
+
+  {% endblock body %}
+

@@ -1,0 +1,5 @@
+django_venv/
+__pycache__/
+*.pyc
+staticfiles/
+.env

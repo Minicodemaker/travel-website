@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% load static %} 
+{% block body %}
+  {% if messages %}
+        {% for message in messages %}
+           <div class="alert alert-info" role="alert">
+              {{ message }}
+           </div>
+        {% endfor %}
+  {% endif %}
+
+
+{% for d in dest %}
+<div class="container-fluid my-0, px-0">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src= "{{ d.img.url }}"  class="d-block w-100" alt="..." height="500" />
+      </div> 
+    </div>
+  </div>
+  <div class="container text-center"  style="position: absolute;
+  
+    position: absolute;
+    top: 273px;
+    left: 300px;
+    color: white;
+    font-size:70px;"
+    > 
+  <h1>{{d.name}}</h1>
+  </div>
+</div>
+
+
+
+
+<div class="container my-3 mb-3" style="background: #effaffff;">
+    <h4> {{d.name}}</h4>
+    <p>{{d.desc}}</p>
+
+</div>
+ {% endfor %}
+
+
+{% endblock body %}
+

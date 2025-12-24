@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block body %}
+<div class="container my-4 mb-0"style="background: #323a4cff ;padding-top:60px;border-radius:10px; padding-bottom:20px; height: 800px; ">
+  <h4 style="text-align:center;color: #f4f8fdff ">Registration form</h4>
+  <form method="post"  class="mx-auto my-4 mb-4 " style="background: #fdfdfdff ;border:8px solid #d4d8ebff; border-radius:10px; margin-bottom:4px; outline:1px solid #020202ff; width: 800px; padding:40px;">
+  {% csrf_token %}
+
+  {% comment %} <input type="text" name="first_name" placeholder="First Name" /><br />
+  <input type="text" name="last_name" placeholder="Last Name" /><br /> {% endcomment %}
+  <label for="first_name" class="form-label">first name</label><br>
+  <input class="form-control" type="text" name="first_name" ><br>
+  <label for="last_name" class="form-label">last name</label><br>
+  <input  class="form-control"type="text" name="last_name" ><br>
+  <label for="username" class="form-label">username</label><br>
+  <input  class="form-control"type="text" name="username"  /><br />
+  <label for="email" class="form-label">email</label><br>
+  <input  class="form-control"type="email" name="email" placeholder="email" /><br />
+  <label for="password" class="form-label">password</label><br>
+  <input class="form-control" type="password" name="password1" placeholder="Password" /><br />
+  <label for="password2" class="form-label">confirm password</label><br>
+  <input class="form-control" type="password" name="password2" placeholder="Confirm Password"/><br />
+  <button class="btn" style="background-color: #ea8a24ff;" type="Submit">Register </button>
+</form>
+
+</div>
+
+<div>
+  {% for message in messages %}
+  <h3>{{ message }}</h3>
+  {% endfor %}
+</div>
+
+{% endblock body %}
