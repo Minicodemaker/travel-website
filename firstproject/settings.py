@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY='django-insecure-htzmz-rgb8yvnemq3hmcsp(%w8)21*)u9012*mfwzp6u5ewbs%'
 
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY","django-insecure-localfallback123")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

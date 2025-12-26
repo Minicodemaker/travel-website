@@ -1,6 +1,35 @@
 .footer {
     background: #040404ff;
     color: #f9fcfdff;
+}
 
-    
+.c1{
+    position: absolute;
+    top:40vh;
+    left:50vw;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-weight: bold;
+    font-family:cambria;
+    font-size:5wv;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .c1 {
+        top: 22vh;
+        font-size: 4vw;
+    }
+}
+
+
+@media (max-width: 678px){
+    .c1 {
+        top: 28vh;
+        font-size: 10vw;
+        text-align: center;
+    }
 } 
+
+
+
